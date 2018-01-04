@@ -1,34 +1,22 @@
-#include <cstdlib>
-#include <iostream>
+//#include "stdafx.h"
+#include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
- 
-using namespace std;
  
 int main(int argc, char *argv[])
 {
-    float x0,y0,z0,x,y,z,r,f;
-       
-    cout << "Enter x0:\n";
-    cin >> x0;
-    cout << "Enter y0:\n";
-    cin >> y0;
-    cout << "Enter z0:\n";
-    cin >> z0;
-    cout << "Enter radius of the sphere:\n";
-    cin >> r;
-    cout <<"\n\n\n";
+    float x,y,z,r,f;
  
-    cout << "Enter x:\n";
-    cin >> x;
-    cout << "Enter y:\n";
-    cin >> y;
-    cout << "Enter z:\n";
-    cin >> z;
-    
-    f = pow(x0-x,2)+pow(y0-y,2)+pow(z0-z,2);
-    if ( f<= pow(r,2))  cout << "The point lies inside the sphere\n";
-    else  cout << "The point doesn't lie inside the sphere\n";
-    
+        printf("Enter radius of the sphere:\n");
+        scanf("%f", &r); // считываем радиус сферы
+        printf("Enter x:\n");
+        scanf("%f", &x); // считываем абсциссу точки
+        printf("Enter y:\n");
+        scanf("%f", &y); // считываем ординату точки
+        f = pow(0-x,2)+pow(0-y,2); // x^2 + y^2
+        if ( f<= pow(r,2)) /*по теореме пифагора проверяем чтобы сумма квадратов координат точки была меньше радиуса в квадрате  */
+printf("The point lies inside the sphere\n");
+    else  printf("The point doesn't lie inside the sphere\n");
+ 
     system("PAUSE");
-    return EXIT_SUCCESS;
 }
